@@ -1,7 +1,30 @@
 
 body   {
-background-color: #fff;
+background-color:#B2FFFF;
+
 }
+
+@media only screen and (max-width: 400px){
+html,body
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+
+
+
+@media scree and (max-width: 900px) and (min-width: 481px) {
+html,body
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+
+
 /* Footer Section */
 
 .section-subscribe{
@@ -37,7 +60,8 @@ font-size: 30px;
 color: green;
 margin: 25px 20px;
 }
-wrapper{
+
+ <!-- wrapper{
 display: flex;
 width: 100%;
 
@@ -62,12 +86,7 @@ width: 45px;
 bottom: 10px;
 background-color:  #3d5c5f;
 }
-h1{
-display: block;
-font-size: 3em;
-font-weight: 90;
-color: #3d535f;
-}
+
 .multitext{
 color: #7f00ff;
 text-transformation: capitalize;
@@ -104,7 +123,7 @@ box-shadow: 0 15px 10px black;
 
 button:hover{
 background-color: purple;
-}
+}  -->
 
 .imagebox{
 margin-top: 100px;
@@ -112,20 +131,239 @@ width: 500px;
 height: 600px;
 left: 800px;
 }
-div.h1{
+.txt2{
 z-index: 3;
 font-size: 40px;
 font-weight: 20em;
-
-top: 500px;
-text-align: centre;
-margin-left: 300px;
+margin-left: 900px;
 }
 .txt{
-background-color: gold;
+background-color: white-smoke;
 border-radius: 100px;
-height: 400px;
-width: 500px;
+height: 500px;
+width: 1300px;
+}
+
+.imagemobi{
+
+}
+
+<!------ Trying out something new ----->
+.nav12{
+padding: 30px 10px 30px 10px!important
+font-weight:
+}
+.w3-row{
+height:280px;padding-top:16px
+}
+
+.tomove{
+margin-top: 30px;
+position: relative;
+top: -100px;
+
+}
+
+.txthtl{
+left:50px;
+margin-left: 200px;
+
+
+}
+.folio{
+margin-left: 500px;
+
+}
+.contactus{
+border: 2px  solid #000000;
+  border-radius: 4px;
+  outline: none;
+  width: 300px;
+  height: 60px;
+  padding: 5px;
+  margin: 13px;
+
+}
+.txtar{
+width: 350px;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #F5F5F5;
+  font-size: 16px;
+  resize: none;
+}
+.sub{
+width:200px !important;
+height: 40px !important;
+}
+.contme{
+width: 80%;
+height: 100vh;
+background-color: ;
+display: flex;
 align-items: centre;
+justify-content: center;
+}
+.connect{
+margin-top: 150px;
+background-color: #F5FEFD;
+width: 100%;
+height:100vh;
+
+}
+.inp{
+margin-left: 690px;
+justify-content: centre;
+position:relative;
+bottom: 500px;
+background-color:#FFF;
+width: 400px;
+height: 600px;
+border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px  #F5F5DC;
+
+}
+.letstxt{
+position: relative;
+left:150px;
+top:100px;
+}
+<!--   Index.html -->
+
+.clency.txt{
+margin-top: 400px;
+
+}
+
+
+.htltxt{
+color: black !important;
+position: relative;
+bottom: 0px;
+}
+.imghsp{
+position: relative;
+bottom: 346px;
+left: 350px
+
+}
+.hsptxt{
+color: black !important;
+position: relative;
+bottom: 330px;
+left: 330px;
+}
+.imgbmi{
+position: relative;
+bottom: 670px;
+left: 0;
+height: 250px;
+width: 330px
+}
+.bmitxt{
+position: relative;
+bottom: 670px;
+left: 0;
+}
+.imgandroid{
+position: relative;
+bottom: 960px;
+left: 350px;
+height: 250px;
+width: 330px
+
+}
+.androidtxt{
+position: relative;
+bottom: 960px;
+left: 350px;
+
+}
+.kotlinimg{
+position: relative;
+bottom: 1250px;
+left: 750px;
+height: 250px;
+width: 350px
+}
+.kottxt{
+position: relative;
+bottom: 1250px;
+left: 790px;
+}
+.port{
+text-shadow: 2px 2px 5px blue;
+  letter-spacing: 5px;
+}
+.testtxt{
+text-shadow: 2px 2px 5px blue;
+  letter-spacing: 5px;
+position: relative;
+bottom: 1200px;
+left: 0;
+}
+.testimonialdiv{
+position: relative;
+bottom: 1200px;
+text-shadow: 2px 2px 5px blue;
+letter-spacing: 5px;
+
+}
+.txtabt{
+margin-left: 500px
+}
+.imgmom{
+border-radius: 30px;
+position: relative;
+bottom: 1200px;
+background-color: #fff;
+border: 2px solid red;
+height: 400px;
+align-items: centre;
+width: 400px;
+}
+.metxt{
+margin-left: 10px;
+margin-top: 10px;
+}
+.imgbecky{
+border-radius: 30px;
+position: relative;
+bottom: 1650px;
+left: 450px;
+background-color: #fff;
+border: 2px solid red;
+height: 400px;
+align-items: centre;
+width: 400px;
+}
+.imgclarise{
+border-radius: 30px;
+position: relative;
+bottom: 1590px;
+background-color: #fff;
+border: 2px solid red;
+height: 400px;
+align-items: centre;
+width: 400px;
+}
+.imgdad{
+border-radius: 30px;
+position: relative;
+bottom: 1980px;
+left: 450px;
+background-color: #fff;
+border: 2px solid red;
+height: 400px;
+align-items: centre;
+width: 400px;
+}
+
+.footme{
+height: 100px;
 
 }
