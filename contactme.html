@@ -3,16 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact Me</title>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('bidOxXv27nGKAB1Bc');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
+
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
       <meta name="keywords" content="">
 
       <meta name="author" content="">
-    <base href="/">
+
 
 <!-- Bootstrap styling -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -61,16 +89,6 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
 <![endif]-->
-    <script type="text/javascript" src="js/index.js"></script>
-
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("bidOxXv27nGKAB1Bc");
-   })();
-</script>
 
 
 </head>
@@ -79,7 +97,7 @@ margin: 0;
 padding: 0;
 overflow-x: hidden;
 }
-<body style="margin-bottom: 0; padding: 0; ">
+<body style="margin-bottom:0; padding: 0; ">
 <nav class="navbar fixed-top navbar-expand-sm navbar-dark " style="background-color:teal">
 
 <div class="container">
@@ -130,7 +148,7 @@ overflow-x: hidden;
         You can fill out the form on the left or get in touch with me at clency2023@gmail.com</p>
                     <div class="contact-container">
                 <div class="main-title">
-                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
+                    <h2>Contact <span>Me!</span><span class="bg-text"></span></h2>
                 </div>
                 <div class="contact-content-con">
                         <div class="contact-info">
@@ -155,38 +173,7 @@ overflow-x: hidden;
                             </div>
 
                         </div>
-    </div>
-
-    <div class="col-md-4 inp">
-  <form id="contact_form" action="#" method="POST" enctype="multipart/form-data" >
-    <div class="col-md-12 ">
-                           <input  class="contactus form-control" id="name" placeholder="Name" type="text" name="name" required>
-                        </div>
-
-                         <div class="col-md-12">
-                           <input class="contactus form-control" id="email" placeholder="Email" type="email" name="email" required>
-                        </div>
-      <h5>Message</h5>
-
-       <textarea class="form-control txtar" id="message"></textarea>
-
-  </form>
-    <button type="submit" class="btn btn-primary " onclick="sendMail()">Submit</button>
-</div>
-
-</div>
-    </div>
-</section>
-
-  <!-- Grid container -->
-<footer class="bg-dark text-center text-white">
-  <!-- Grid container -->
-  <div class="container p-4 pb-0 footme">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-
-      <!-- Twitter -->
+                      <!-- Twitter -->
       <a
         class="btn text-white btn-floating m-1"
         style="background-color: #55acee;"
@@ -229,20 +216,67 @@ overflow-x: hidden;
         role="button"
         ><i class="fab fa-github"></i
       ></a>
-    </section>
-    <!-- Section: Social media -->
-  </div>
-</footer>
-<!--footer-->
-
-  <!-- Copyright -->
-  <div class="text-center p-3 footme" style="background-color: rgba(0, 0, 0, 0.2);">
+  <div class="text-center p-3 footme">
     © 2023 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">ClencyChristine</a>
+    <a class="text-white" target="_blank" href="https://mdbootstrap.com/">ClencyChristine</a>
   </div>
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="col-md-4 inp">
+  <form id="myForm" action="#" method="POST" enctype="multipart/form-data" >
+    <div class="col-md-12 ">
+                           <input  class="contactus form-control" id="name" placeholder="Name" type="text" name="name" required>
+                        </div>
+
+                         <div class="col-md-12">
+                           <input class="contactus form-control" id="email" placeholder="Email" type="email" name="email" required>
+                        </div>
+      <h5>Message</h5>
+
+       <textarea class="form-control txtar" id="message"></textarea>
+
+  </form>
+    <button type="submit" class="btn btn-primary subtn" value="send">Send</button>
+</div>
+
+</div>
+    </div>
+</section>
+
+
   <!-- Copyright -->
 
 <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+</script>
+<!-- <script type="text/javascript">
+  (function() {
+    emailjs.init("YOUR_USER_ID"); //please encrypted user id for malicious attacks
+  })();
+//set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
+  var templateParams = {
+    to_name: 'clency2023@gmail.com',
+    from_name: 'abc',
+    message_html: 'Please Find out the attached file'
+  };
+
+  emailjs.send('service_e6vkzei', 'template_2z4ftsq', templateParams)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+      console.log('FAILED...', error);
+    });
+</script> -->
+
 
 </body>
 </html>

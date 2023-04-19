@@ -207,21 +207,14 @@ display: flex;
 align-items: centre;
 justify-content: center;
 }
-.connect{
-margin-top: 150px;
-background-color: #F5FEFD;
-width: 100%;
-height:100vh;
-
-}
 .inp{
-margin-left: 690px;
+margin-left: 550px;
 justify-content: centre;
 position:relative;
-bottom: 500px;
+bottom: 450px;
 background-color:#FFF;
 width: 400px;
-height: 600px;
+height: 500px;
 border: 1px solid;
   padding: 10px;
   box-shadow: 5px 10px  #F5F5DC;
@@ -365,5 +358,24 @@ width: 400px;
 
 .footme{
 height: 100px;
+position: relative;
+right: 100px;
 
+}
+.subtn{
+width: 300px;
+margin-top: 10px;
+height: 50px;
+cursor: pointer;
+border: none;
+padding: 0.8em;
+font-size: 1.2em;
+transition: 0.3s;
+}
+
+
+@media (min-width: 600px) {
+  .column {
+    width: 50%;
+  }
 }
